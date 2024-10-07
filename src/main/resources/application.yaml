@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: spring_init
+  data:
+    mongodb:
+      url: mongodb://mongo:27017/spring_init
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Ov23li6eiRvKjjhG8VGX
+            client-secret: c47008551147160750435e18abb920a89f6f3a64
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*" #heapdump,threaddump,metrics,prometheus,health,info
+    jmx:
+      exposure:
+        include: "*" #heapdump,threaddump,metrics,prometheus,health,info
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+  info:
+    git:
+      mode: full
+    env:
+      enabled: true
+

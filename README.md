@@ -4,7 +4,7 @@ This helps understanding all the basic configs needed to create a basic spring a
 This project contains all of this 
 
 - Mongo DB connect
-- Authentication
+- Security
 	- Single user
 	- User in DB - Bcrypt
 	- OAUTH 
@@ -13,3 +13,12 @@ This project contains all of this
 	- FileAppender
 	- Logstash appender
 - Actuators 
+- Exception handling
+  - Controller Advice
+- Dockerise the app
+
+# Steps to run
+
+> ./gradlew clean bootJar 
+> 
+> docker-compose up --build
